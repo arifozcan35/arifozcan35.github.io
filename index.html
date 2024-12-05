@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kullanıcı Kayıt ve Giriş</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <h1>Hoş Geldiniz</h1>
+      <h1>Sadece çocuklar girebilir! Ya da hala içindeki çocuğu içinde barındıranlar :) </h1>
+      <div class="tab">
+        <button class="tablinks" onclick="openForm(event, 'login')" id="defaultOpen">Giriş Yap</button>
+        <button class="tablinks" onclick="openForm(event, 'signup')">Kayıt Ol</button>
+      </div>
+      <div id="login" class="tabcontent">
+        <form id="loginForm">
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" name="email" placeholder="Email adresinizi girin" required>
+          <label for="loginPassword">Şifre</label>
+          <input type="password" id="loginPassword" name="password" placeholder="Şifrenizi girin" required>
+          <button type="submit">Giriş Yap</button>
+        </form>
+      </div>
+      <div id="signup" class="tabcontent">
+        <form id="signupForm">
+          <label for="signupEmail">Email</label>
+          <input type="email" id="signupEmail" name="email" placeholder="Email adresinizi girin" required>
+          <label for="signupPassword">Şifre</label>
+          <input type="password" id="signupPassword" name="password" placeholder="Şifrenizi oluşturun" required>
+          <button type="submit">Kayıt Ol</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Firebase App -->
+  <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
+  <!-- Firebase Authentication -->
+  <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth-compat.js"></script>
+  <!-- Custom Script -->
+  <script src="scripts.js"></script>
+
+</body>
+</html>
