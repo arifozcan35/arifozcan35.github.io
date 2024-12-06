@@ -203,3 +203,53 @@ button[type="submit"]:hover {
   color: white;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Yazılar için okunabilirlik artırıldı */
 }
+
+
+/* Responsive Tasarım: Mobil Cihazlar için */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Navbar öğeleri dikey hizalanır */
+    height: auto; /* Dinamik yükseklik */
+  }
+
+  .navbar-left {
+    justify-content: center;
+    margin-bottom: 10px; /* Mobilde logo ve başlık arasına boşluk eklendi */
+  }
+
+  .navbar-right {
+    justify-content: center;
+    gap: 5px; /* Butonlar arasındaki boşluk azaltıldı */
+    flex-wrap: wrap;
+  }
+
+  .project-name {
+    font-size: 18px; /* Mobilde başlık boyutu küçültüldü */
+  }
+
+  .form-container {
+    padding: 15px; /* Mobilde iç padding azaltıldı */
+    border-radius: 10px; /* Yuvarlak köşeler daha küçük */
+    max-width: 90%; /* Kutucuk genişliği ekranın %90'ını kaplar */
+  }
+
+  .resources, .contact {
+    padding: 15px; /* Mobilde içerik alanına daha fazla yer */
+    height: auto; /* İçerik dinamik olarak genişler */
+  }
+
+  .cards {
+    flex-direction: column; /* Mobilde kartlar dikey hizalanır */
+    gap: 15px;
+  }
+
+  input[type="email"], input[type="password"] {
+    padding: 8px; /* Mobilde input alanları daha küçük */
+    font-size: 14px; /* Yazı boyutu küçültüldü */
+  }
+
+  button[type="submit"] {
+    padding: 8px 15px; /* Mobilde buton boyutu küçültüldü */
+    font-size: 14px; /* Yazı boyutu küçültüldü */
+  }
+}
