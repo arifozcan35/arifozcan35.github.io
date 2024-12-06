@@ -207,9 +207,14 @@ button[type="submit"]:hover {
 
 /* Responsive Tasarım: Mobil Cihazlar için */
 @media screen and (max-width: 768px) {
+  html, body {
+    overflow-y: auto; /* Dikey kaydırma özelliği etkinleştirildi */
+  }
+
   .navbar {
     flex-direction: column; /* Navbar öğeleri dikey hizalanır */
     height: auto; /* Dinamik yükseklik */
+    padding: 10px; /* Navbar iç boşluğu azaltıldı */
   }
 
   .navbar-left {
@@ -220,36 +225,57 @@ button[type="submit"]:hover {
   .navbar-right {
     justify-content: center;
     gap: 5px; /* Butonlar arasındaki boşluk azaltıldı */
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Butonlar ekran genişliğine göre sarılır */
   }
 
   .project-name {
     font-size: 18px; /* Mobilde başlık boyutu küçültüldü */
+    text-align: center; /* Başlık ortalandı */
   }
 
   .form-container {
-    padding: 15px; /* Mobilde iç padding azaltıldı */
+    padding: 20px; /* Mobilde iç padding artırıldı */
     border-radius: 10px; /* Yuvarlak köşeler daha küçük */
     max-width: 90%; /* Kutucuk genişliği ekranın %90'ını kaplar */
+    margin: 20px auto; /* Ortalanır */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Hafif gölge */
   }
 
   .resources, .contact {
     padding: 15px; /* Mobilde içerik alanına daha fazla yer */
-    height: auto; /* İçerik dinamik olarak genişler */
+    min-height: auto; /* İçerik dinamik olarak genişler */
+    margin: 10px auto; /* Ortalanır */
+    text-align: center;
+    overflow-y: auto; /* Dikey kaydırmayı etkinleştirir */
   }
 
   .cards {
     flex-direction: column; /* Mobilde kartlar dikey hizalanır */
-    gap: 15px;
+    gap: 15px; /* Kartlar arasındaki boşluk artırıldı */
+    margin: 10px auto; /* Ortalanır */
+  }
+
+  .card {
+    width: 90%; /* Kartlar ekran genişliğine uyum sağlar */
+    margin: 0 auto; /* Ortalanır */
   }
 
   input[type="email"], input[type="password"] {
-    padding: 8px; /* Mobilde input alanları daha küçük */
+    padding: 10px; /* Mobilde input alanları daha rahat kullanılır */
     font-size: 14px; /* Yazı boyutu küçültüldü */
+    margin: 10px 0; /* Yukarı-aşağı boşluk eklendi */
   }
 
   button[type="submit"] {
-    padding: 8px 15px; /* Mobilde buton boyutu küçültüldü */
+    padding: 10px; /* Mobilde buton boyutu optimize edildi */
     font-size: 14px; /* Yazı boyutu küçültüldü */
+    margin: 10px 0; /* Yukarı-aşağı boşluk eklendi */
+  }
+
+  h1, h1 + p {
+    font-size: 20px; /* Başlık yazı boyutu optimize edildi */
+    line-height: 1.5; /* Daha okunabilir satır aralığı */
+    margin-bottom: 15px; /* Başlık altına boşluk eklendi */
   }
 }
+
